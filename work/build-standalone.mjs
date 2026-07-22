@@ -18,6 +18,7 @@ tick(); setInterval(tick,30000);
 addEventListener('pointermove',e=>{root.style.setProperty('--x',e.clientX+'px');root.style.setProperty('--y',e.clientY+'px')});
 const pauseBand=document.querySelector('.timeline-break');
 if(pauseBand){const pauseObserver=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){pauseBand.classList.add('is-visible');pauseObserver.disconnect()}},{threshold:.55});pauseObserver.observe(pauseBand)}
+document.querySelectorAll('[data-career-toggle]').forEach(toggle=>toggle.addEventListener('click',()=>{const school=toggle.closest('.timeline-school');const open=school.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));school.querySelector('.career-panel').setAttribute('aria-hidden',String(!open))}));
 const button = document.querySelector('.menu-button'); const links = document.querySelector('.nav-links');
 button.addEventListener('click',()=>{const open=links.classList.toggle('open');button.textContent=open?'Close':'Menu';button.setAttribute('aria-expanded',open)});
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');button.textContent='Menu';button.setAttribute('aria-expanded','false')}));
