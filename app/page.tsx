@@ -147,6 +147,19 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const band = document.querySelector(".timeline-break");
+    if (!band) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        band.classList.add("is-visible");
+        observer.disconnect();
+      }
+    }, { threshold: 0.55 });
+    observer.observe(band);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = selectedProject || selectedCapability || selectedStory !== null ? "hidden" : "";
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") { setSelectedProject(null); setSelectedCapability(null); setSelectedStory(null); }
@@ -242,9 +255,11 @@ export default function Home() {
         <div className="timeline">
           <div className="timeline-item"><span>2014.03.17. - 2015.01.14.</span><h3>춘천 남부초등학교</h3><p>신규 발령으로 교사의 길을 시작했습니다.</p></div>
           <div className="timeline-break" aria-label="군 복무를 위한 휴직">
-            <div className="timeline-break-track" aria-hidden="true">
-              <div className="timeline-break-run"><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span></div>
-              <div className="timeline-break-run"><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span></div>
+            <div className="timeline-break-ghost" aria-hidden="true">
+              <span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span>
+            </div>
+            <div className="timeline-break-focus" aria-hidden="true">
+              <i /><span>군 복무를 위한 휴직</span><i />
             </div>
           </div>
           <div className="timeline-item"><span>2016.10.15. - 2020.02.29.</span><h3>춘천 남부초등학교</h3><p>복직 후 수업과 학교생활의 기반을 다졌습니다.</p></div>
