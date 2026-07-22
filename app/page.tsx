@@ -175,7 +175,7 @@ function CareerSchool({ stop }: { stop: (typeof careerStops)[number] }) {
     <div className="career-years">
       {stop.years.map((item) => <article className={!item.duty || item.duty.startsWith("행정업무 없음") ? "no-duty" : ""} key={`${stop.school}-${item.year}`}>
         <span>{item.year}</span>
-        <div><h4>{item.role}</h4>{item.subjects && <em>{item.subjects}</em>}<p><small>School role</small>{item.duty || "행정업무 없음"}</p></div>
+        <div><h4>{item.role}{item.subjects && <em> · {item.subjects}</em>}</h4><p><small>업무</small>{item.duty || "행정업무 없음"}</p></div>
       </article>)}
     </div>
   </details>;
