@@ -254,7 +254,7 @@ export default function Home() {
         <div className="apple-story-head">
           <p>Education × Apple</p>
           <h2>Apple과의<br />교육적 만남.</h2>
-          <a href="https://www.apple.com/kr/education/k12/apple-distinguished-educator/" target="_blank" rel="noreferrer">Official ADE profile <span>↗</span></a>
+          <a href="https://www.apple.com/kr/education/k12/apple-distinguished-educator/#:~:text=Moon-hyuk%20Choi" target="_blank" rel="noreferrer">Official ADE profile <span>↗</span></a>
         </div>
         <div className="apple-story-body">
           <p className="apple-lead">기술을 잘 사용하는 데서 멈추지 않고, 기술이 교사와 학생의 가능성을 어떻게 넓힐 수 있는지 탐구합니다.</p>
