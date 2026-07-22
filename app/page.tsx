@@ -44,11 +44,95 @@ const capabilities = [
   { no: "03", title: "Share", text: "교실의 실천을 기록하고 널리 나눕니다.", detail: "한 교실의 좋은 시도가 그 안에서만 끝나지 않도록 글과 영상, 웹 콘텐츠와 연수로 기록합니다. 여느날 여느교실을 운영하고 책과 지역화 교과서, 정보교육 5분 레시피를 만들며 동료 교사가 바로 활용할 수 있는 언어와 형태로 경험을 나누고 있습니다.", points: ["교육 콘텐츠 기획·제작·운영", "책·교과서·영상으로 남기는 기록", "동료 교사와 함께 성장하는 공유 문화"] },
 ];
 
+const stories = [
+  {
+    no: "01", group: "Practice · Since 2020", title: "여느날\n여느교실", summary: "교사들이 함께 만들고 연구한 자료를 더 넓은 교실로 연결합니다.",
+    sections: [
+      { label: "Context", title: "혼자만의 좋은 수업을 넘어", text: "수업을 준비하며 만든 자료와 시행착오가 한 교실 안에서만 사라지는 것이 늘 아쉬웠습니다. 여러 선생님이 각자의 경험을 연결하면 더 많은 학생에게 좋은 배움이 닿을 수 있다고 생각했습니다." },
+      { label: "Practice", title: "만들고, 공유하고, 함께 연구하기", text: "2020년부터 교육 콘텐츠 공간 ‘여느날 여느교실’ 운영에 참여하고 있습니다. 블로그와 유튜브 채널을 통해 바로 활용할 수 있는 교육 자료와 수업 아이디어, 도구의 활용법을 꾸준히 나누고 있습니다." },
+      { label: "Meaning", title: "공유가 만드는 신뢰", text: "완성된 정답만 보여주기보다 고민과 과정까지 솔직하게 공개하는 일이 동료 교사 사이의 신뢰를 만들고, 한 사람의 경험을 모두의 가능성으로 바꾼다고 믿습니다." },
+    ], links: [{ label: "블로그 방문", href: "https://ynys-classroom.tistory.com/" }, { label: "YouTube 채널", href: "https://www.youtube.com/c/여느날여느교실" }],
+  },
+  {
+    no: "02", group: "Publication · 2020", title: "교사가 되기 전에는\n몰랐습니다만", summary: "교사로 살아가며 새롭게 알게 된 교실의 이야기를 한 권의 에세이로 기록했습니다.",
+    sections: [
+      { label: "Context", title: "교사가 된 뒤에야 보인 것들", text: "아이를 가르치는 기쁨과 어려움, 교실에서 마주하는 작고 선명한 순간들은 교사가 되기 전에는 알 수 없던 세계였습니다. 그 장면들을 과장하지 않고 솔직한 언어로 남기고 싶었습니다." },
+      { label: "Record", title: "교실의 시간을 책으로", text: "교사 생활에서 새롭게 알게 된 이야기를 교육 에세이 『교사가 되기 전에는 몰랐습니다만』에 담았습니다. 이 책은 2020년 한국출판문화산업진흥원 우수출판콘텐츠 제작 지원 당선작으로 선정되었습니다." },
+      { label: "Meaning", title: "기록은 다시 대화가 됩니다", text: "개인의 경험으로 시작한 글은 북토크와 인터뷰를 통해 교사, 학부모, 독자와 교실을 다시 이야기하는 매개가 되었습니다. 기록은 지나간 일을 보존하는 동시에 다음 질문을 여는 일임을 배웠습니다." },
+    ], links: [{ label: "도서 정보", href: "https://search.shopping.naver.com/book/catalog/32444936666" }],
+  },
+  {
+    no: "03", group: "Curriculum · 2020—2023", title: "안녕?\n우리 춘천!", summary: "학생이 사는 지역 자체를 가장 가까운 교과서로 만들었습니다.",
+    sections: [
+      { label: "Problem", title: "국정 교과서와 아이들의 삶 사이", text: "초등학교 3학년 사회 교과서의 사례는 춘천의 학생들이 자신의 생활과 연결해 이해하기에 지역성이 부족했습니다. 멀리 있는 사례보다 매일 걷고 바라보는 장소에서 배움을 시작할 필요가 있었습니다." },
+      { label: "Making", title: "지역을 담은 워크북과 웹 콘텐츠", text: "사회 교과서와 함께 활용하는 지역화 교과서 ‘안녕? 우리 춘천!’을 공동 연구·집필했습니다. 춘천의 장소와 이야기, 활동 자료를 워크북에 담고 교수·학습 사이트와 지명유래 놀이 웹카드 제작에도 참여했습니다." },
+      { label: "Meaning", title: "지역은 살아 있는 교과서", text: "아이들이 이미 알고 있다고 생각했던 동네를 새로운 눈으로 탐구하면서, 배움은 삶과 가까울수록 더 구체적이고 오래 남는다는 사실을 확인했습니다. 콘텐츠는 매년 협의를 통해 보완했습니다." },
+    ], links: [],
+  },
+  {
+    no: "04", group: "Open class · 2022", title: "수업 나눔\nV-log", summary: "수업의 결과뿐 아니라 설계와 고민, 피드백의 과정까지 공개했습니다.",
+    sections: [
+      { label: "Question", title: "완성된 수업만 보여줘야 할까?", text: "수업 공개는 흔히 잘 정돈된 한 장면에 집중합니다. 하지만 동료 교사에게 정말 도움이 되는 것은 그 수업에 도달하기까지의 판단과 망설임, 실패를 조정한 과정이라고 생각했습니다." },
+      { label: "Practice", title: "아이패드와 클라우드로 연결한 수업", text: "강원도교육청 수업 나눔 브이로그 ‘수나브로’에 참여했습니다. 아이패드의 Numbers와 Schoolwork 등 기본 앱을 활용하고, 클라우드에서 학생의 활동을 공유·평가하며 의미 있는 피드백을 전달하는 과정을 공개했습니다." },
+      { label: "Meaning", title: "과정을 나누는 수업 공개", text: "새로운 도구의 기능보다 교사가 왜 그 도구를 선택했고 학생의 반응을 보며 어떻게 수업을 바꾸었는지 보여주려 했습니다. 솔직한 과정의 공유가 동료의 새로운 시도를 더 쉽게 시작하게 합니다." },
+    ], links: [{ label: "수나브로 영상", href: "https://www.youtube.com/watch?v=qPHQcXqozT4" }],
+  },
+  {
+    no: "05", group: "Forum · 2021.12.03", title: "강원미래교육포럼\n주제 발제", summary: "게이미피케이션을 통해 단 한 사람도 포기하지 않는 과학 수업을 제안했습니다.",
+    sections: [
+      { label: "Theme", title: "보편적 학습설계를 수업의 언어로", text: "‘단 한 사람도 포기하지 않는 강원교육 상상하기’를 주제로 열린 포럼에서 과학과 게이미피케이션 전략을 통한 보편적 학습설계를 발표했습니다." },
+      { label: "Proposal", title: "참여의 문턱을 낮추는 설계", text: "학생마다 다른 흥미와 학습 양식, 성취 수준을 고려해 선택과 도전, 즉각적인 피드백을 수업 안에 배치하는 방법을 제안했습니다. 게임 자체가 목적이 아니라 모든 학생이 배움에 들어올 수 있는 경로를 다양하게 만드는 것이 핵심이었습니다." },
+      { label: "Meaning", title: "교실의 실천을 공적인 제안으로", text: "한 교실에서 검증한 작은 전략을 교육 공동체의 언어로 정리해 나누는 경험이었습니다. 실천을 설명할 수 있을 때 경험은 다른 환경에서도 다시 시도될 수 있습니다." },
+    ], links: [{ label: "발제 영상", href: "https://youtu.be/kyITSX6KMJk?t=5515" }],
+  },
+  {
+    no: "06", group: "Video series · 2021", title: "정보교육\n5분 레시피", summary: "교사가 바로 시작할 수 있는 여섯 개의 짧고 실제적인 안내서를 만들었습니다.",
+    sections: [
+      { label: "Need", title: "도구를 아는 것과 수업에 쓰는 것 사이", text: "새로운 서비스는 계속 등장하지만 바쁜 교사가 긴 설명을 따라가며 수업 활용법까지 찾기는 쉽지 않습니다. 짧은 시간 안에 핵심 기능과 실제 사용 장면을 함께 보여주는 콘텐츠가 필요했습니다." },
+      { label: "Making", title: "여섯 서비스, 여섯 편의 영상", text: "강원교육과학정보원의 ‘정보교육을 위한 스마트기기 간단 활용 5분 레시피’ 제작에 참여했습니다. 구글문서, 그래플릿, 캔바, 로블록스, 게더타운, 워드월을 교사가 바로 따라 할 수 있는 흐름으로 소개했습니다." },
+      { label: "Meaning", title: "짧지만 실제적인 첫걸음", text: "기능을 많이 설명하기보다 수업에서 가장 먼저 필요한 한 가지 장면에 집중했습니다. 좋은 안내는 전문성을 과시하는 것이 아니라 사용자가 스스로 다음 단계로 갈 수 있게 만드는 것이라고 생각합니다." },
+    ], links: [{ label: "영상 모음 보기", href: "https://youtu.be/goJRNs5m7NY" }],
+  },
+  {
+    no: "07", group: "School challenge · Connection", title: "초등교사가 진행한\n중학교 자유학년제", summary: "초중 사이의 물리적·제도적 거리를 넘어 연계교육의 가능성을 실험했습니다.",
+    sections: [
+      { label: "Challenge", title: "초등교사가 중학생을 만난다는 것", text: "초중통합운영학교에서 자유학년제 강사 자격을 얻어 중학교 1학년 예술·체육 주제선택 수업을 2년간 단독으로 진행했습니다. 처음에는 초등학생과 다른 반응을 마주할까 걱정했습니다." },
+      { label: "Learning", title: "가까워지자 경계가 흐려졌습니다", text: "한 학기에 걸쳐 학생들과 가까워지며 중학생 역시 호기심과 관계 속에서 배우는 학생이라는 당연한 사실을 새롭게 체감했습니다. 학교 차원에서도 초중 연계교육의 실제 모델을 확인할 수 있었습니다." },
+      { label: "Meaning", title: "제도의 틈을 배움의 통로로", text: "학교급 사이의 경계는 고정된 벽이 아니라 새로운 배움을 설계할 수 있는 조건이 될 수 있습니다. 낯선 대상과 환경을 두려워하지 않고 먼저 만나 보는 경험이 저에게도 큰 배움이 되었습니다." },
+    ], links: [],
+  },
+  {
+    no: "08", group: "School challenge · Organization", title: "담임에게 행정업무를\n주지 않는 팀", summary: "담임교사가 수업·상담·생활지도에 집중할 시간을 조직적으로 만들었습니다.",
+    sections: [
+      { label: "Problem", title: "교사의 시간이 어디에 쓰이는가", text: "약 40학급 규모의 학교에서 담임교사가 수업 준비와 상담보다 행정 처리에 더 많은 시간을 쓰는 구조를 당연하게 받아들이고 싶지 않았습니다." },
+      { label: "Action", title: "교육과정기획팀으로 업무를 모으다", text: "2021년 5명, 2022년 7명의 교육과정기획팀 교사가 학교 전체 업무를 함께 맡았습니다. 담임선생님에게 행정 업무는 물론 과제카드조차 주지 않는 것을 목표로 역할과 절차를 다시 설계했습니다." },
+      { label: "Meaning", title: "업무 정상화는 수업을 위한 설계", text: "업무의 많고 적음보다 중요한 변화는 담임교사가 수업 준비, 상담, 생활지도라는 본연의 일에 더 깊은 시간과 노력을 쓸 수 있게 된 것입니다. 조직의 구조도 교육의 질을 바꾸는 설계 대상입니다." },
+    ], links: [],
+  },
+  {
+    no: "09", group: "School challenge · Curriculum", title: "국정 교과서 없이\n설계한 과학 수업", summary: "성취기준과 우리 학생의 학습 양식에서 차시를 다시 구성했습니다.",
+    sections: [
+      { label: "Question", title: "교과서는 하나뿐일까?", text: "교과서와 국정 교과서를 같은 것으로 보는 익숙한 인식에서 벗어나고 싶었습니다. 교사가 교육적 의도를 가지고 활용하는 모든 자료는 배움을 위한 교과서가 될 수 있습니다." },
+      { label: "Design", title: "성취기준에서 시작하는 차시", text: "6학년 과학을 가르치며 국가교육과정의 성취기준과 학습 요소를 출발점으로 수업을 구성했습니다. 학교와 학생의 성취 수준, 학습 습관을 고려해 더 재미있는 활동과 더 깊은 탐구를 선택했습니다." },
+      { label: "Meaning", title: "번거로움이 만든 ‘아하!’", text: "교사에게는 한 과정이 더 늘었지만 학생에게는 자신의 방식으로 이해할 가능성이 커졌습니다. 수업 중 표정과 입으로 ‘아하!’를 말하는 학생이 늘면서 교육과정 재구성의 힘을 확인했습니다." },
+    ], links: [],
+  },
+  {
+    no: "10", group: "School challenge · 1:1 Learning", title: "아이패드에 쌓이는\n배움의 기록", summary: "과제·탐구·프로젝트·평가·피드백을 한 흐름으로 연결했습니다.",
+    sections: [
+      { label: "Beginning", title: "기기를 나눠 주는 것 이후", text: "온라인 콘텐츠 활용 교과서 선도학교 선정으로 6학년 학생에게 1인 1아이패드 환경이 마련되었습니다. 목표는 종이를 화면으로 바꾸는 데 있지 않았습니다." },
+      { label: "System", title: "배움의 전 과정을 연결하다", text: "사전 과제, 수업 활동과 탐구, 모둠 프로젝트, 개별 평가와 피드백을 아이패드와 클라우드에서 이어지게 했습니다. 기기는 교과서이자 학습 공책, 협업 공간, 평가의 장이 되었습니다." },
+      { label: "Meaning", title: "보이는 기록, 실제적인 피드백", text: "학생의 활동과 과제가 시간에 따라 자동으로 쌓이면서 결과 한 번보다 변화의 과정을 볼 수 있게 되었습니다. 학생의 학습 의욕이 높아졌고 교사는 더 구체적이고 의미 있는 피드백을 제공할 수 있었습니다." },
+    ], links: [{ label: "운영 사례 보기", href: "https://www.canva.com/design/DAE8jFEvMlA/et_S3sCqXV26NfPQdNwJdQ/view" }],
+  },
+];
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [time, setTime] = useState("");
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
   const [selectedCapability, setSelectedCapability] = useState<(typeof capabilities)[number] | null>(null);
+  const [selectedStory, setSelectedStory] = useState<number | null>(null);
 
   useEffect(() => {
     const update = () => setTime(new Intl.DateTimeFormat("ko-KR", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Asia/Seoul" }).format(new Date()));
@@ -63,13 +147,18 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = selectedProject || selectedCapability ? "hidden" : "";
-    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") { setSelectedProject(null); setSelectedCapability(null); } };
+    document.body.style.overflow = selectedProject || selectedCapability || selectedStory !== null ? "hidden" : "";
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { setSelectedProject(null); setSelectedCapability(null); setSelectedStory(null); }
+      if (selectedStory !== null && event.key === "ArrowLeft") setSelectedStory((selectedStory - 1 + stories.length) % stories.length);
+      if (selectedStory !== null && event.key === "ArrowRight") setSelectedStory((selectedStory + 1) % stories.length);
+    };
     window.addEventListener("keydown", closeOnEscape);
     return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", closeOnEscape); };
-  }, [selectedProject, selectedCapability]);
+  }, [selectedProject, selectedCapability, selectedStory]);
 
   const closeMenu = () => setMenuOpen(false);
+  const activeStory = selectedStory !== null ? stories[selectedStory] : stories[0];
 
   return (
     <main>
@@ -183,12 +272,7 @@ export default function Home() {
           <p className="practice-note">2023년 포트폴리오에 기록된 대표 활동입니다. 지금의 이야기는 이후 업데이트될 예정입니다.</p>
         </div>
         <div className="practice-list">
-          <a className="practice-item" href="https://ynys-classroom.tistory.com/" target="_blank" rel="noreferrer"><span>01 · 2020—</span><h3>여느날 여느교실</h3><p>교사들이 함께 교육 자료를 만들고 공유하며 연구하는 콘텐츠 커뮤니티를 운영합니다.</p><b>↗</b></a>
-          <a className="practice-item" href="https://search.shopping.naver.com/book/catalog/32444936666" target="_blank" rel="noreferrer"><span>02 · Publication</span><h3>교사가 되기 전에는<br />몰랐습니다만</h3><p>교사로 살며 새롭게 알게 된 이야기를 기록한 에세이. 2020 우수출판콘텐츠 제작 지원 당선작입니다.</p><b>↗</b></a>
-          <div className="practice-item"><span>03 · 2020—2023</span><h3>안녕? 우리 춘천!</h3><p>초등학교 3학년을 위한 지역화 교과서와 교수·학습 사이트를 공동 연구하고 집필했습니다.</p><b>＋</b></div>
-          <a className="practice-item" href="https://www.youtube.com/watch?v=qPHQcXqozT4" target="_blank" rel="noreferrer"><span>04 · Open class</span><h3>수업 나눔 V-log</h3><p>아이패드와 클라우드를 활용한 수업의 설계, 평가, 피드백 과정을 동료 교사들과 공유했습니다.</p><b>↗</b></a>
-          <a className="practice-item" href="https://youtu.be/kyITSX6KMJk?t=5515" target="_blank" rel="noreferrer"><span>05 · Forum · 2021</span><h3>강원미래교육포럼<br />주제 발제</h3><p>과학과 게이미피케이션 전략을 통한 보편적 학습설계를 주제로 강원교육의 가능성을 제안했습니다.</p><b>↗</b></a>
-          <a className="practice-item" href="https://youtu.be/goJRNs5m7NY" target="_blank" rel="noreferrer"><span>06 · Video series</span><h3>정보교육<br />5분 레시피</h3><p>교사를 위해 구글문서, 그래플릿, 캔바, 로블록스, 게더타운, 워드월 활용법을 여섯 편의 영상으로 제작했습니다.</p><b>↗</b></a>
+          {stories.slice(0, 6).map((story, index) => <button className="practice-item" data-story={index} onClick={() => setSelectedStory(index)} key={story.no}><span>{story.no} · {story.group.split(" · ").slice(1).join(" · ")}</span><h3>{story.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3><p>{story.summary}</p><b>＋</b></button>)}
         </div>
       </section>
 
@@ -199,10 +283,7 @@ export default function Home() {
           <p className="school-lab-lead">새로운 도구를 쓰는 것보다 학교의 오래된 전제를 다시 묻는 일에 집중했습니다.</p>
         </header>
         <div className="challenge-grid">
-          <article><span>01 · Connection</span><h3>초등교사가 진행한<br />중학교 자유학년제</h3><p>중학교 1학년 예술·체육 주제선택 수업을 2년간 맡으며 초중 연계교육의 실제 가능성을 실험했습니다.</p></article>
-          <article><span>02 · Organization</span><h3>담임에게 행정업무를<br />주지 않는 팀</h3><p>교육과정기획팀에서 학교 업무를 함께 맡아 담임교사가 수업, 상담, 생활지도에 집중할 시간을 만들었습니다.</p></article>
-          <article><span>03 · Curriculum</span><h3>국정 교과서 없이<br />설계한 과학 수업</h3><p>성취기준과 학생의 학습 양식을 출발점으로 차시와 활동을 직접 구성하며 교과서의 범위를 다시 정의했습니다.</p></article>
-          <article><span>04 · 1:1 Learning</span><h3>아이패드에 쌓이는<br />배움의 기록</h3><p>사전 과제부터 탐구, 프로젝트, 평가와 피드백까지 1인 1기기와 클라우드로 연결했습니다.</p></article>
+          {stories.slice(6).map((story, offset) => <article key={story.no}><button className="challenge-open" data-story={offset + 6} onClick={() => setSelectedStory(offset + 6)} aria-label={`${story.title.replace("\n", " ")} 자세히 읽기`}><span>{String(offset + 1).padStart(2, "0")} · {story.group.split(" · ").at(-1)}</span><h3>{story.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3><p>{story.summary}</p><b>Read story ＋</b></button></article>)}
         </div>
       </section>
 
@@ -284,6 +365,26 @@ export default function Home() {
         <p>{selectedCapability?.detail || capabilities[0].detail}</p>
         <ul>{(selectedCapability?.points || capabilities[0].points).map((point) => <li key={point}>{point}</li>)}</ul>
       </section>
+
+      <div className="story-data" hidden>{stories.map((story) => <article data-story-record={story.no} key={story.no}><span data-field="group">{story.group}</span><span data-field="title">{story.title}</span><span data-field="summary">{story.summary}</span><div data-field="sections">{story.sections.map((section) => <section key={section.label}><span>{section.label}</span><h3>{section.title}</h3><p>{section.text}</p></section>)}</div><div data-field="links">{story.links.map((link) => <a href={link.href} key={link.href}>{link.label}</a>)}</div></article>)}</div>
+      <div className={`story-backdrop ${selectedStory !== null ? "open" : ""}`} onClick={() => setSelectedStory(null)} aria-hidden="true" />
+      <aside className={`story-reader ${selectedStory !== null ? "open" : ""}`} role="dialog" aria-modal="true" aria-hidden={selectedStory === null} aria-labelledby="story-title">
+        <header className="story-reader-bar">
+          <div><span>Story reader</span><strong>{activeStory.no} / {String(stories.length).padStart(2, "0")}</strong></div>
+          <button className="story-close" onClick={() => setSelectedStory(null)} aria-label="스토리 리더 닫기">Close <span>×</span></button>
+        </header>
+        <div className="story-reader-content">
+          <p className="story-group">{activeStory.group}</p>
+          <h2 id="story-title">{activeStory.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h2>
+          <p className="story-lede">{activeStory.summary}</p>
+          <div className="story-sections">{activeStory.sections.map((section) => <section key={section.label}><span>{section.label}</span><h3>{section.title}</h3><p>{section.text}</p></section>)}</div>
+          {activeStory.links.length > 0 && <div className="story-links">{activeStory.links.map((link) => <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label}<span>↗</span></a>)}</div>}
+        </div>
+        <nav className="story-nav" aria-label="스토리 이동">
+          <button onClick={() => setSelectedStory(((selectedStory ?? 0) - 1 + stories.length) % stories.length)}>← Previous</button>
+          <button onClick={() => setSelectedStory(((selectedStory ?? 0) + 1) % stories.length)}>Next →</button>
+        </nav>
+      </aside>
     </main>
   );
 }
