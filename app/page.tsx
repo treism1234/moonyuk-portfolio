@@ -241,7 +241,12 @@ export default function Home() {
         </header>
         <div className="timeline">
           <div className="timeline-item"><span>2014.03.17. - 2015.01.14.</span><h3>춘천 남부초등학교</h3><p>신규 발령으로 교사의 길을 시작했습니다.</p></div>
-          <div className="timeline-break"><span>2015.01.15. - 2016.10.14.</span><p>군 복무를 위한 휴직</p></div>
+          <div className="timeline-break" aria-label="군 복무를 위한 휴직">
+            <div className="timeline-break-track" aria-hidden="true">
+              <div className="timeline-break-run"><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span></div>
+              <div className="timeline-break-run"><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span></div>
+            </div>
+          </div>
           <div className="timeline-item"><span>2016.10.15. - 2020.02.29.</span><h3>춘천 남부초등학교</h3><p>복직 후 수업과 학교생활의 기반을 다졌습니다.</p></div>
           <div className="timeline-item"><span>2020.03.01. - 2021.02.28.</span><h3>춘천 신남초등학교</h3><p>교육 콘텐츠와 지역화 교과서 집필 등 교실 밖으로 배움의 연결을 넓혔습니다.</p></div>
           <div className="timeline-item"><span>2021.03.01. - 2025.02.28.</span><h3>춘천 퇴계초중학교</h3><p>초중 연계교육, 교육과정기획팀, 디지털 기반 수업을 통해 학교 안의 새로운 가능성을 실험했습니다.</p></div>
