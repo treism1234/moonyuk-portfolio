@@ -159,14 +159,14 @@ button { font:inherit; }
 
 /* Collision-free mobile hero: metadata, statement, and portrait occupy separate bands. */
 @media(max-width:760px){
-  .hero{display:block;min-height:940px;padding:240px 20px 60px}
-  .updated-stamp{top:32px;right:20px;font-size:7px;gap:7px}
-  .eyebrow{top:118px;right:20px;text-align:right;font-size:8px;line-height:1.55}
-  .hero-title{position:relative;z-index:3;max-width:100%;font-size:15vw;line-height:1}
+  .hero{display:block;min-height:960px;padding:280px 20px 60px}
+  .updated-stamp{top:96px;right:20px;font-size:7px;gap:7px}
+  .eyebrow{top:172px;right:20px;text-align:right;font-size:8px;line-height:1.55}
+  .hero-title{position:relative;z-index:3;max-width:100%;font-size:clamp(48px,15vw,68px);line-height:1}
   .hero-copy{position:relative;z-index:4;max-width:100%;margin:44px 0 0;font-size:15px;line-height:1.75}
-  .identity-card{left:20px;right:auto;top:555px;bottom:auto;gap:4px;padding-left:11px}
+  .identity-card{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:max-content;margin-top:54px;gap:4px;padding-left:11px}
   .identity-card strong{font-size:22px}
   .identity-card span,.identity-card small{font-size:7px;white-space:nowrap}
-  .hero-person{width:72vw;height:34%;right:-18vw;bottom:-2%;opacity:.58}
+  .hero-person{width:72vw;height:30%;right:-18vw;bottom:-2%;opacity:.58}
   .scroll-cue{left:20px;bottom:34px}
 }
