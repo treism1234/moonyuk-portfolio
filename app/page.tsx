@@ -154,7 +154,7 @@ const careerStops = [
       { year: "2021", role: "교과전담", subjects: "과학", duty: "교육과정지원 · 학생자치 · 동아리" },
       { year: "2022", role: "교과전담", subjects: "과학", duty: "교육과정기획 · 연구" },
       { year: "2023", role: "교과전담", subjects: "과학", duty: "교무기획 · 교무" },
-      { year: "2024", role: "5학년 담임", subjects: "", duty: "행정업무 없음 · 교육과정기획팀 전담" },
+      { year: "2024", role: "5학년 담임", subjects: "", duty: "교육과정기획팀(업무전담팀) 운영으로 담임교사 업무 없음" },
     ],
   },
   {
@@ -173,7 +173,7 @@ function CareerSchool({ stop }: { stop: (typeof careerStops)[number] }) {
       <span>{stop.dates}</span><h3>{stop.school}</h3><p>{stop.description}</p><b aria-hidden="true">＋</b>
     </summary>
     <div className="career-years">
-      {stop.years.map((item) => <article className={!item.duty || item.duty.startsWith("행정업무 없음") ? "no-duty" : ""} key={`${stop.school}-${item.year}`}>
+      {stop.years.map((item) => <article key={`${stop.school}-${item.year}`}>
         <span>{item.year}</span>
         <div><h4>{item.role}{item.subjects && <em> · {item.subjects}</em>}</h4><p><small>업무</small>{item.duty || "행정업무 없음"}</p></div>
       </article>)}
