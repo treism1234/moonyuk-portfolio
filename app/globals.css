@@ -117,3 +117,6 @@ button { font:inherit; }
 
 /* Keep the work label fixed when descriptions wrap */
 .career-years p{align-items:flex-start}.career-years p small{flex:0 0 32px;width:32px;height:24px;box-sizing:border-box;display:grid;place-items:center;padding:0;white-space:nowrap;line-height:1}
+
+/* Fixed four-year scale on desktop */
+@media(min-width:761px){.career-years{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:0;background:transparent}.career-years article{border-top:1px solid #aaa69d;border-right:1px solid #aaa69d;border-bottom:1px solid #aaa69d}}
