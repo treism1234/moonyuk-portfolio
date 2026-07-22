@@ -186,6 +186,19 @@ function CareerSchool({ stop }: { stop: (typeof careerStops)[number] }) {
   </section>;
 }
 
+function AppleMemberBadge({ designation, mark }: { designation: string; mark: string }) {
+  return (
+    <div className="apple-member-badge" aria-label={`최문혁 · Apple ${designation}`}>
+      <span className="badge-strap" aria-hidden="true"><i /></span>
+      <div className="badge-card">
+        <div className="badge-brand"><img src={mark} alt={`Apple ${designation}`} /></div>
+        <strong>최문혁</strong>
+        <div className="badge-photo"><img src="/profile-v2.png" alt="" /></div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [time, setTime] = useState("");
@@ -331,8 +344,8 @@ export default function Home() {
         <div className="apple-story-body">
           <p className="apple-lead">기술을 잘 사용하는 데서 멈추지 않고, 기술이 교사와 학생의 가능성을 어떻게 넓힐 수 있는지 탐구합니다.</p>
           <div className="apple-path">
-            <article><span>ADE</span><div><p>Apple Distinguished Educator</p><h3>글로벌 교육자<br />커뮤니티와 연결되다.</h3><p>Apple 기술로 가르침과 배움의 변화를 이끄는 교육자로 선정되었습니다. Apple 공식 페이지에 <strong>Moon-hyuk Choi</strong>, 대한민국 초등학교 교사로 소개되어 있습니다.</p></div></article>
-            <article><span>APLS</span><div><p>Apple Professional Learning Specialist</p><h3>동료 교사의 변화에<br />함께하다.</h3><p>교육 현장에 맞춘 코칭과 멘토링을 통해 Apple 기술이 수업과 평가, 창작의 도구가 되도록 교육자들의 전문적 성장을 지원합니다.</p></div></article>
+            <article className="member-row"><AppleMemberBadge designation="Distinguished Educator" mark="/apple-ade-mark.png" /><span>ADE</span><div><p>Apple Distinguished Educator</p><h3>글로벌 교육자<br />커뮤니티와 연결되다.</h3><p>Apple 기술로 가르침과 배움의 변화를 이끄는 교육자로 선정되었습니다. Apple 공식 페이지에 <strong>Moon-hyuk Choi</strong>, 대한민국 초등학교 교사로 소개되어 있습니다.</p></div></article>
+            <article className="member-row"><AppleMemberBadge designation="Professional Learning Specialist" mark="/apple-apls-mark.png" /><span>APLS</span><div><p>Apple Professional Learning Specialist</p><h3>동료 교사의 변화에<br />함께하다.</h3><p>교육 현장에 맞춘 코칭과 멘토링을 통해 Apple 기술이 수업과 평가, 창작의 도구가 되도록 교육자들의 전문적 성장을 지원합니다.</p></div></article>
             <article><span>ADS</span><div><p>Apple Distinguished School</p><h3>한 교실을 넘어<br />학교의 문화를 설계하다.</h3><p>1인 1기기 학습 환경과 지속적인 교육 혁신 사례를 체계화하며, 학교가 Apple Distinguished School의 비전을 구현하는 과정에 참여했습니다.</p></div></article>
           </div>
         </div>
