@@ -127,6 +127,60 @@ const stories = [
   },
 ];
 
+const careerStops = [
+  {
+    dates: "2014.03.17. - 2015.01.14.", school: "춘천 남부초등학교", description: "신규 발령으로 교사의 길을 시작했습니다.",
+    years: [
+      { year: "2014", role: "교과전담", subjects: "과학 · 도덕 · 실과", duty: "육상부 · 다문화" },
+      { year: "2015", role: "교과전담", subjects: "체육", duty: "육상부" },
+    ],
+  },
+  {
+    dates: "2016.10.15. - 2020.02.29.", school: "춘천 남부초등학교", description: "복직 후 담임으로 학생들과 생활하며 학교생활의 기반을 다졌습니다.",
+    years: [
+      { year: "2016", role: "5학년 담임", subjects: "", duty: "청소년단체" },
+      { year: "2017", role: "5학년 담임", subjects: "", duty: "청소년단체" },
+      { year: "2018", role: "5학년 담임", subjects: "", duty: "임시 업무" },
+      { year: "2019", role: "3학년 담임", subjects: "", duty: "방송업무" },
+    ],
+  },
+  {
+    dates: "2020.03.01. - 2021.02.28.", school: "춘천 신남초등학교", description: "교육 콘텐츠와 지역화 교과서 집필 등 교실 밖으로 배움의 연결을 넓혔습니다.",
+    years: [{ year: "2020", role: "2학년 담임", subjects: "", duty: "육상부" }],
+  },
+  {
+    dates: "2021.03.01. - 2025.02.28.", school: "춘천 퇴계초중학교", description: "초중 연계교육과 교육과정 기획, 디지털 기반 수업의 가능성을 실험했습니다.",
+    years: [
+      { year: "2021", role: "교과전담", subjects: "과학", duty: "교육과정지원 · 학생자치 · 동아리" },
+      { year: "2022", role: "교과전담", subjects: "과학", duty: "교육과정기획 · 연구" },
+      { year: "2023", role: "교과전담", subjects: "과학", duty: "교무기획 · 교무" },
+      { year: "2024", role: "5학년 담임", subjects: "", duty: "행정업무 없음 · 교육과정기획팀 전담" },
+    ],
+  },
+  {
+    dates: "2025.03.01. - 2026.02.28.", school: "춘천 봉의초등학교", description: "새로운 학교의 학생·동료 교사들과 교육 실천을 확장했습니다.",
+    years: [{ year: "2025", role: "4학년 담임", subjects: "", duty: "연구정보" }],
+  },
+  {
+    dates: "2026.03.01. - 현재", school: "홍천 홍천초등학교", description: "학생의 삶에서 출발하는 수업과 디지털 기반 배움의 장면을 이어가고 있습니다.", current: true,
+    years: [{ year: "2026", role: "5학년 담임", subjects: "", duty: "과학정보" }],
+  },
+];
+
+function CareerSchool({ stop }: { stop: (typeof careerStops)[number] }) {
+  return <details className={`timeline-school ${stop.current ? "current" : ""}`}>
+    <summary className="timeline-item">
+      <span>{stop.dates}</span><h3>{stop.school}</h3><p>{stop.description}</p><b aria-hidden="true">＋</b>
+    </summary>
+    <div className="career-years">
+      {stop.years.map((item) => <article className={!item.duty || item.duty.startsWith("행정업무 없음") ? "no-duty" : ""} key={`${stop.school}-${item.year}`}>
+        <span>{item.year}</span>
+        <div><h4>{item.role}</h4>{item.subjects && <em>{item.subjects}</em>}<p><small>School role</small>{item.duty || "행정업무 없음"}</p></div>
+      </article>)}
+    </div>
+  </details>;
+}
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [time, setTime] = useState("");
@@ -253,17 +307,13 @@ export default function Home() {
           <div className="archive-stamp">2023<br />Archive</div>
         </header>
         <div className="timeline">
-          <div className="timeline-item"><span>2014.03.17. - 2015.01.14.</span><h3>춘천 남부초등학교</h3><p>신규 발령으로 교사의 길을 시작했습니다.</p></div>
+          <CareerSchool stop={careerStops[0]} />
           <div className="timeline-break" aria-label="군 복무를 위한 휴직">
             <div className="timeline-break-focus" aria-hidden="true">
               <i /><span>군 복무를 위한 휴직</span><i />
             </div>
           </div>
-          <div className="timeline-item"><span>2016.10.15. - 2020.02.29.</span><h3>춘천 남부초등학교</h3><p>복직 후 수업과 학교생활의 기반을 다졌습니다.</p></div>
-          <div className="timeline-item"><span>2020.03.01. - 2021.02.28.</span><h3>춘천 신남초등학교</h3><p>교육 콘텐츠와 지역화 교과서 집필 등 교실 밖으로 배움의 연결을 넓혔습니다.</p></div>
-          <div className="timeline-item"><span>2021.03.01. - 2025.02.28.</span><h3>춘천 퇴계초중학교</h3><p>초중 연계교육, 교육과정기획팀, 디지털 기반 수업을 통해 학교 안의 새로운 가능성을 실험했습니다.</p></div>
-          <div className="timeline-item"><span>2025.03.01. - 2026.02.28.</span><h3>춘천 봉의초등학교</h3><p>교실에서 이어 온 교육 실천을 새로운 학교의 학생·동료 교사들과 확장했습니다.</p></div>
-          <div className="timeline-item current"><span>2026.03.01. - 현재</span><h3>홍천 홍천초등학교</h3><p>학생의 삶에서 출발하는 수업과 디지털 기반 배움의 새로운 장면을 이어가고 있습니다.</p></div>
+          {careerStops.slice(1).map((stop) => <CareerSchool stop={stop} key={`${stop.school}-${stop.dates}`} />)}
         </div>
       </section>
 
