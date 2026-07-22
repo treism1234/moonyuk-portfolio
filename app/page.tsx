@@ -304,7 +304,7 @@ export default function Home() {
           <p className="school-lab-lead">새로운 도구를 쓰는 것보다 학교의 오래된 전제를 다시 묻는 일에 집중했습니다.</p>
         </header>
         <div className="challenge-grid">
-          {stories.slice(6).map((story, offset) => <article key={story.no}><button className="challenge-open" data-story={offset + 6} onClick={() => setSelectedStory(offset + 6)} aria-label={`${story.title.replace("\n", " ")} 자세히 읽기`}><span>{String(offset + 1).padStart(2, "0")} · {story.group.split(" · ").at(-1)}</span><h3>{story.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3><p>{story.summary}</p><b>Read story ＋</b></button></article>)}
+          {stories.slice(6).map((story, offset) => <article key={story.no}><button className="challenge-open" data-story={offset + 6} onClick={() => setSelectedStory(offset + 6)} aria-label={`${story.title.replace("\n", " ")} 자세히 읽기`}><span className="challenge-meta">{String(offset + 1).padStart(2, "0")} · {story.group.split(" · ").at(-1)}</span><span className="challenge-index" aria-hidden="true">{String(offset + 1).padStart(2, "0")}</span><h3>{story.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3><p>{story.summary}</p><b className="challenge-cta">Read story <i aria-hidden="true">↗</i></b></button></article>)}
         </div>
       </section>
 
