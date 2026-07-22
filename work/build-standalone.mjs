@@ -9,10 +9,14 @@ const body = bodyMatch[1].replace(/<script[\s\S]*?<\/script>/g, "").replace(/<!-
 const profileImage = await readFile(new URL("../public/profile-v2.png", import.meta.url));
 const adeMark = await readFile(new URL("../public/apple-ade-mark.png", import.meta.url));
 const aplsMark = await readFile(new URL("../public/apple-apls-mark.png", import.meta.url));
+const adsMark = await readFile(new URL("../public/apple-ads-mark.png", import.meta.url));
+const schoolMark = await readFile(new URL("../public/toegye-school-mark.png", import.meta.url));
 const embeddedBody = body
   .replaceAll('src="/profile-v2.png"', `src="data:image/png;base64,${profileImage.toString("base64")}"`)
   .replaceAll('src="/apple-ade-mark.png"', `src="data:image/png;base64,${adeMark.toString("base64")}"`)
-  .replaceAll('src="/apple-apls-mark.png"', `src="data:image/png;base64,${aplsMark.toString("base64")}"`);
+  .replaceAll('src="/apple-apls-mark.png"', `src="data:image/png;base64,${aplsMark.toString("base64")}"`)
+  .replaceAll('src="/apple-ads-mark.png"', `src="data:image/png;base64,${adsMark.toString("base64")}"`)
+  .replaceAll('src="/toegye-school-mark.png"', `src="data:image/png;base64,${schoolMark.toString("base64")}"`);
 const sourceCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 const css = sourceCss.replace(/^@import[^\n]+\n+/, "").replaceAll("var(--font-geist-mono),", "");
 const script = `
