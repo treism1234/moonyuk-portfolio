@@ -188,7 +188,7 @@ function CareerSchool({ stop }: { stop: (typeof careerStops)[number] }) {
 
 function AppleMemberBadge({ designation, mark }: { designation: string; mark: string }) {
   return (
-    <div className="apple-member-badge" aria-label={`최문혁 · Apple ${designation}`}>
+    <div className={`apple-member-badge ${designation.includes("Professional") ? "badge-apls" : "badge-ade"}`} aria-label={`최문혁 · Apple ${designation}`}>
       <span className="badge-strap" aria-hidden="true"><i /></span>
       <div className="badge-card">
         <div className="badge-brand"><img src={mark} alt={`Apple ${designation}`} /></div>

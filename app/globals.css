@@ -86,6 +86,23 @@ button { font:inherit; }
 
 @media(max-width:1100px) and (min-width:761px){.apple-path article.member-row{padding-right:185px}.apple-member-badge{width:165px}.badge-brand img{max-width:139px}.badge-photo img{width:195px}}
 @media(max-width:760px){.apple-path article.member-row{min-height:0;padding:0 0 48px}.apple-member-badge{position:relative;right:auto;top:auto;grid-column:1/-1;width:178px;height:278px;margin:0 auto 34px}.badge-card{inset:48px 0 0}.badge-brand img{max-width:150px}.badge-photo{height:132px}.badge-photo img{width:205px}}
+
+/* Compact Apple membership cards */
+.apple-path article.member-row{min-height:0;padding-right:145px}
+.apple-member-badge{right:8px;width:116px;height:177px}
+.badge-strap{width:21px;height:34px;border-radius:0 0 6px 6px}
+.badge-strap i{bottom:-5px;width:31px;height:20px;border-width:4px;border-radius:7px}
+.badge-card{inset:29px 0 0;border-radius:10px;padding:18px 8px 0;box-shadow:0 6px 14px #2630332b}
+.badge-card::before{top:9px;width:22px;height:4px}
+.badge-brand{height:27px;margin-bottom:5px}
+.badge-brand img{max-width:98px;max-height:25px}
+.badge-apls .badge-brand img{max-width:86px;max-height:21px}
+.badge-card>strong{font-size:15px}
+.badge-photo{left:3px;right:3px;bottom:0;height:86px}
+.badge-photo img{top:0;bottom:auto;width:126px}
+
+@media(max-width:1100px) and (min-width:761px){.apple-path article.member-row{padding-right:132px}.apple-member-badge{width:116px}.badge-brand img{max-width:98px}.badge-apls .badge-brand img{max-width:86px}.badge-photo img{width:126px}}
+@media(max-width:760px){.apple-path article.member-row{padding:0 0 48px}.apple-member-badge{width:116px;height:177px;margin:0 auto 26px}.badge-card{inset:29px 0 0}.badge-brand img{max-width:98px}.badge-apls .badge-brand img{max-width:86px}.badge-photo{height:86px}.badge-photo img{width:126px}}
 @media(max-width:760px){.hero-person{width:92vw;height:55%;right:-28vw;bottom:-4%;opacity:.52}.identity-card{left:auto;right:6vw;top:auto;bottom:33%;gap:4px;padding-left:11px}.identity-card strong{font-size:22px}.identity-card span{font-size:7px}.identity-card small{font-size:7px;white-space:nowrap}.updated-stamp{top:91px;right:20px;font-size:7px;gap:7px}.updated-stamp:before{width:4px;height:4px}.eyebrow{top:32%;right:20px;text-align:right;font-size:8px;line-height:1.55}.hero-title{z-index:3;max-width:100%;font-size:15vw}.hero-copy{max-width:62%;z-index:4}}
 @media(max-width:760px){.challenge-open{min-height:320px;padding:25px 22px 55px}.challenge-open b{left:22px}.story-reader{width:100%}.story-reader-bar{padding:16px 20px}.story-reader-content{padding:45px 20px 65px}.story-reader h2{font-size:13vw;margin:22px 0 30px}.story-lede{font-size:19px;margin-bottom:55px;padding-left:16px}.story-sections section{display:block;padding:25px 0 30px}.story-sections section>span{display:block;margin-bottom:18px}.story-sections h3{font-size:25px}.story-sections p{font-size:14px;line-height:1.75}.story-links{display:grid}.story-links a{min-width:0}.story-nav button{padding:16px 20px}.story-reader-bar>div span{display:none}}
 
