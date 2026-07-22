@@ -16,6 +16,8 @@ const time = document.querySelector('.availability');
 const tick = () => { const now = new Intl.DateTimeFormat('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Seoul'}).format(new Date()); time.innerHTML = '<i></i> Korea · ' + now; };
 tick(); setInterval(tick,30000);
 addEventListener('pointermove',e=>{root.style.setProperty('--x',e.clientX+'px');root.style.setProperty('--y',e.clientY+'px')});
+const pauseBand=document.querySelector('.timeline-break');
+if(pauseBand){const pauseObserver=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){pauseBand.classList.add('is-visible');pauseObserver.disconnect()}},{threshold:.55});pauseObserver.observe(pauseBand)}
 const button = document.querySelector('.menu-button'); const links = document.querySelector('.nav-links');
 button.addEventListener('click',()=>{const open=links.classList.toggle('open');button.textContent=open?'Close':'Menu';button.setAttribute('aria-expanded',open)});
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');button.textContent='Menu';button.setAttribute('aria-expanded','false')}));
