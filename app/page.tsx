@@ -96,6 +96,10 @@ export default function Home() {
           <strong>최문혁</strong>
           <small>Teacher · Author · Maker</small>
         </div>
+        <div className="updated-stamp" aria-label="최종 수정일 2026년 7월 22일">
+          <span>Last updated</span>
+          <time dateTime="2026-07-22">2026.07.22</time>
+        </div>
         <h1 className="hero-title">
           <span className="line"><span>좋은 질문으로</span></span>
           <span className="line offset"><span>새로운 장면을</span></span>
