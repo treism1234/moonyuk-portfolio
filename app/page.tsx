@@ -147,7 +147,9 @@ export default function Home() {
           <div className="archive-stamp">2023<br />Archive</div>
         </header>
         <div className="timeline">
-          <div className="timeline-item"><span>2014—2020</span><h3>춘천 남부초등학교</h3><p>신규 발령으로 교사의 길을 시작하고, 군 복무 후 다시 교실로 돌아왔습니다.</p></div>
+          <div className="timeline-item"><span>2014.03—2015.01</span><h3>춘천 남부초등학교</h3><p>신규 발령으로 교사의 길을 시작했습니다.</p></div>
+          <div className="timeline-item"><span>2015.01—2016.10</span><h3>의무경찰 · 112타격대</h3><p>군 복무를 마친 뒤 다시 교실로 돌아왔습니다.</p></div>
+          <div className="timeline-item"><span>2016.10—2020.02</span><h3>춘천 남부초등학교</h3><p>복직 후 수업과 학교생활의 기반을 다졌습니다.</p></div>
           <div className="timeline-item"><span>2020—2021</span><h3>춘천 신남초등학교</h3><p>교육 콘텐츠와 지역화 교과서 집필 등 교실 밖으로 배움의 연결을 넓혔습니다.</p></div>
           <div className="timeline-item current"><span>2021—2023 기록</span><h3>춘천 퇴계초중학교</h3><p>초중 연계교육, 교육과정기획팀, 디지털 기반 수업을 통해 학교 안의 새로운 가능성을 실험했습니다.</p></div>
         </div>
@@ -180,6 +182,49 @@ export default function Home() {
           <a className="practice-item" href="https://search.shopping.naver.com/book/catalog/32444936666" target="_blank" rel="noreferrer"><span>02 · Publication</span><h3>교사가 되기 전에는<br />몰랐습니다만</h3><p>교사로 살며 새롭게 알게 된 이야기를 기록한 에세이. 2020 우수출판콘텐츠 제작 지원 당선작입니다.</p><b>↗</b></a>
           <div className="practice-item"><span>03 · 2020—2023</span><h3>안녕? 우리 춘천!</h3><p>초등학교 3학년을 위한 지역화 교과서와 교수·학습 사이트를 공동 연구하고 집필했습니다.</p><b>＋</b></div>
           <a className="practice-item" href="https://www.youtube.com/watch?v=qPHQcXqozT4" target="_blank" rel="noreferrer"><span>04 · Open class</span><h3>수업 나눔 V-log</h3><p>아이패드와 클라우드를 활용한 수업의 설계, 평가, 피드백 과정을 동료 교사들과 공유했습니다.</p><b>↗</b></a>
+          <a className="practice-item" href="https://youtu.be/kyITSX6KMJk?t=5515" target="_blank" rel="noreferrer"><span>05 · Forum · 2021</span><h3>강원미래교육포럼<br />주제 발제</h3><p>과학과 게이미피케이션 전략을 통한 보편적 학습설계를 주제로 강원교육의 가능성을 제안했습니다.</p><b>↗</b></a>
+          <a className="practice-item" href="https://youtu.be/goJRNs5m7NY" target="_blank" rel="noreferrer"><span>06 · Video series</span><h3>정보교육<br />5분 레시피</h3><p>교사를 위해 구글문서, 그래플릿, 캔바, 로블록스, 게더타운, 워드월 활용법을 여섯 편의 영상으로 제작했습니다.</p><b>↗</b></a>
+        </div>
+      </section>
+
+      <section className="school-lab">
+        <header className="school-lab-head">
+          <p>Challenges inside school · 2021—2023</p>
+          <h2>학교 안에서<br /><em>바꿔 본 것들.</em></h2>
+          <p className="school-lab-lead">새로운 도구를 쓰는 것보다 학교의 오래된 전제를 다시 묻는 일에 집중했습니다.</p>
+        </header>
+        <div className="challenge-grid">
+          <article><span>01 · Connection</span><h3>초등교사가 진행한<br />중학교 자유학년제</h3><p>중학교 1학년 예술·체육 주제선택 수업을 2년간 맡으며 초중 연계교육의 실제 가능성을 실험했습니다.</p></article>
+          <article><span>02 · Organization</span><h3>담임에게 행정업무를<br />주지 않는 팀</h3><p>교육과정기획팀에서 학교 업무를 함께 맡아 담임교사가 수업, 상담, 생활지도에 집중할 시간을 만들었습니다.</p></article>
+          <article><span>03 · Curriculum</span><h3>국정 교과서 없이<br />설계한 과학 수업</h3><p>성취기준과 학생의 학습 양식을 출발점으로 차시와 활동을 직접 구성하며 교과서의 범위를 다시 정의했습니다.</p></article>
+          <article><span>04 · 1:1 Learning</span><h3>아이패드에 쌓이는<br />배움의 기록</h3><p>사전 과제부터 탐구, 프로젝트, 평가와 피드백까지 1인 1기기와 클라우드로 연결했습니다.</p></article>
+        </div>
+      </section>
+
+      <section className="archive-room">
+        <header className="archive-room-head"><p>Talks · Press · Learning media</p><h2>기록으로 남은<br />도전들.</h2></header>
+        <div className="archive-columns">
+          <div className="press-list">
+            <p className="archive-label">Book talks & interviews</p>
+            <a href="http://www.kwnews.co.kr/nview.asp?s=201&aid=220060700117" target="_blank" rel="noreferrer"><span>2020.06</span><strong>강원일보 · 6년 동안 짧고 굵게 느낀 선생님이란?</strong><b>↗</b></a>
+            <a href="http://www.kado.net/news/articleView.html?idxno=1027923" target="_blank" rel="noreferrer"><span>2020.06</span><strong>강원도민일보 · 좋은 스승 꿈꾸며 쓴 한 권의 일기</strong><b>↗</b></a>
+            <a href="https://youtu.be/eWvZUKH8ISs" target="_blank" rel="noreferrer"><span>2020.07</span><strong>여느날 여느교실 · 북토크</strong><b>↗</b></a>
+            <a href="https://youtu.be/mjjpxD-6Vdc" target="_blank" rel="noreferrer"><span>2020.11</span><strong>서울시 도서관 · 북콘서트</strong><b>↗</b></a>
+            <a href="https://www.hankyung.com/life/article/2021010787451" target="_blank" rel="noreferrer"><span>2021.01</span><strong>한국경제 · 이상과는 너무 다른 공무원의 세계</strong><b>↗</b></a>
+            <a href="https://www.tekville.com/files/magazine/pdf/magazine_pdf_1655338596.pdf" target="_blank" rel="noreferrer"><span>2022.06</span><strong>티처빌 매거진 · 어른 같지 않은 어른으로 키우겠습니다</strong><b>↗</b></a>
+          </div>
+          <div className="recipe-panel">
+            <p className="archive-label">Information education · 5 minute recipe</p>
+            <h3>교사를 위한 여섯 개의<br />짧고 실제적인 안내서.</h3>
+            <div className="recipe-links">
+              <a href="https://youtu.be/goJRNs5m7NY" target="_blank" rel="noreferrer">01 구글문서 ↗</a>
+              <a href="https://youtu.be/CeKxM6gFy8g" target="_blank" rel="noreferrer">02 그래플릿 ↗</a>
+              <a href="https://youtu.be/CcRaybZOVsA" target="_blank" rel="noreferrer">03 캔바 ↗</a>
+              <a href="https://youtu.be/-vNDipT1bIY" target="_blank" rel="noreferrer">04 로블록스 ↗</a>
+              <a href="https://youtu.be/kuBjwroO_Ig" target="_blank" rel="noreferrer">05 게더타운 ↗</a>
+              <a href="https://youtu.be/DZPDfaOrbpo" target="_blank" rel="noreferrer">06 워드월 ↗</a>
+            </div>
+          </div>
         </div>
       </section>
 
