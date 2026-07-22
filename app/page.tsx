@@ -255,9 +255,6 @@ export default function Home() {
         <div className="timeline">
           <div className="timeline-item"><span>2014.03.17. - 2015.01.14.</span><h3>춘천 남부초등학교</h3><p>신규 발령으로 교사의 길을 시작했습니다.</p></div>
           <div className="timeline-break" aria-label="군 복무를 위한 휴직">
-            <div className="timeline-break-ghost" aria-hidden="true">
-              <span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span><span>군 복무를 위한 휴직</span>
-            </div>
             <div className="timeline-break-focus" aria-hidden="true">
               <i /><span>군 복무를 위한 휴직</span><i />
             </div>

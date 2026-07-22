@@ -93,3 +93,7 @@ button { font:inherit; }
 .challenge-cta i{width:40px;height:40px;border:1px solid rgba(24,23,22,.48);border-radius:50%;display:grid;place-items:center;font:17px/1 Arial,sans-serif;transition:background .3s,color .3s,transform .3s}
 .challenge-open:hover .challenge-cta i,.challenge-open:focus-visible .challenge-cta i{background:var(--ink);border-color:var(--ink);color:var(--acid);transform:translate(3px,-3px)}
 @media(max-width:760px){.challenge-grid article{min-height:370px;padding:0}.challenge-open{min-height:370px;padding:25px 24px 30px}.challenge-grid h3{font-size:36px;margin:70px 0 22px}.challenge-grid p{font-size:14px;margin-bottom:58px}.challenge-meta{font-size:9px!important}.challenge-index{right:17px;top:8px;font-size:88px!important}.challenge-cta{left:24px!important;right:22px;bottom:22px!important}.challenge-cta i{width:36px;height:36px}}
+
+/* Career pause band */
+.timeline-break-ghost{display:none}
+@media(min-width:761px){.timeline-break-focus{width:min(1080px,94%);grid-template-columns:minmax(240px,1fr) auto minmax(240px,1fr);gap:26px}}
