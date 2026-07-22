@@ -132,13 +132,12 @@ const careerStops = [
     dates: "2014.03.17. - 2015.01.14.", school: "춘천 남부초등학교", description: "신규 발령으로 교사의 길을 시작했습니다.",
     years: [
       { year: "2014", role: "교과전담", subjects: "과학 · 도덕 · 실과", duty: "육상부 · 다문화" },
-      { year: "2015", role: "교과전담", subjects: "체육", duty: "육상부" },
     ],
   },
   {
     dates: "2016.10.15. - 2020.02.29.", school: "춘천 남부초등학교", description: "복직 후 담임으로 학생들과 생활하며 학교생활의 기반을 다졌습니다.",
     years: [
-      { year: "2016", role: "5학년 담임", subjects: "", duty: "청소년단체" },
+      { year: "2016", role: "교과전담", subjects: "체육", duty: "육상 및 체육" },
       { year: "2017", role: "5학년 담임", subjects: "", duty: "청소년단체" },
       { year: "2018", role: "5학년 담임", subjects: "", duty: "임시 업무" },
       { year: "2019", role: "3학년 담임", subjects: "", duty: "방송업무" },
