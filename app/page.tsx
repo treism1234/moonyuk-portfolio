@@ -372,6 +372,7 @@ export default function Home() {
           <div className="drawer-facts"><span>My role</span><p>{selectedProject?.role || "Strategy · Design · Build"}</p><span>Outcome</span><p>{selectedProject?.result || "Project result"}</p></div>
           <p className="drawer-detail">{selectedProject?.detail || "프로젝트에 대한 상세 설명입니다."}</p>
           <blockquote>{selectedProject?.insight || "프로젝트를 통해 발견한 핵심 관점입니다."}</blockquote>
+          <img className="drawer-book-cover" src="https://shopping-phinf.pstatic.net/main_3244493/32444936666.20260722083430.jpg?type=w300" alt="교사가 되기 전에는 몰랐습니다만 책 표지" hidden={selectedProject?.no !== "02"} />
         </div>
       </aside>
 
