@@ -156,3 +156,17 @@ button { font:inherit; }
 
 /* Fixed four-year scale on desktop */
 @media(min-width:761px){.career-years{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:0;background:transparent}.career-years article{border-top:1px solid #aaa69d;border-right:1px solid #aaa69d;border-bottom:1px solid #aaa69d}}
+
+/* Collision-free mobile hero: metadata, statement, and portrait occupy separate bands. */
+@media(max-width:760px){
+  .hero{display:block;min-height:940px;padding:240px 20px 60px}
+  .updated-stamp{top:32px;right:20px;font-size:7px;gap:7px}
+  .eyebrow{top:118px;right:20px;text-align:right;font-size:8px;line-height:1.55}
+  .hero-title{position:relative;z-index:3;max-width:100%;font-size:15vw;line-height:1}
+  .hero-copy{position:relative;z-index:4;max-width:100%;margin:44px 0 0;font-size:15px;line-height:1.75}
+  .identity-card{left:20px;right:auto;top:555px;bottom:auto;gap:4px;padding-left:11px}
+  .identity-card strong{font-size:22px}
+  .identity-card span,.identity-card small{font-size:7px;white-space:nowrap}
+  .hero-person{width:72vw;height:34%;right:-18vw;bottom:-2%;opacity:.58}
+  .scroll-cue{left:20px;bottom:34px}
+}
