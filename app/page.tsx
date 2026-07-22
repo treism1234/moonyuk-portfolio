@@ -168,17 +168,23 @@ const careerStops = [
 ];
 
 function CareerSchool({ stop }: { stop: (typeof careerStops)[number] }) {
-  return <details className={`timeline-school ${stop.current ? "current" : ""}`}>
-    <summary className="timeline-item">
+  const [open, setOpen] = useState(false);
+  return <section className={`timeline-school ${stop.current ? "current" : ""} ${open ? "open" : ""}`}>
+    <button className="timeline-item career-toggle" data-career-toggle onClick={() => setOpen(!open)} aria-expanded={open}>
       <span>{stop.dates}</span><h3>{stop.school}</h3><p>{stop.description}</p><b aria-hidden="true">＋</b>
-    </summary>
-    <div className="career-years">
-      {stop.years.map((item) => <article key={`${stop.school}-${item.year}`}>
-        <span>{item.year}</span>
-        <div><h4>{item.role}{item.subjects && <em> · {item.subjects}</em>}</h4><p><small>업무</small>{item.duty || "행정업무 없음"}</p></div>
-      </article>)}
+    </button>
+    <div className="career-panel" aria-hidden={!open}>
+      <div className="career-panel-inner">
+        <span className="career-nested-label">Years inside this school</span>
+        <div className="career-years">
+          {stop.years.map((item) => <article key={`${stop.school}-${item.year}`}>
+            <span>{item.year}</span>
+            <div><h4>{item.role}{item.subjects && <em> · {item.subjects}</em>}</h4><p><small>업무</small>{item.duty || "행정업무 없음"}</p></div>
+          </article>)}
+        </div>
+      </div>
     </div>
-  </details>;
+  </section>;
 }
 
 export default function Home() {
